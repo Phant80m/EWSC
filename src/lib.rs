@@ -1,7 +1,6 @@
 #[macro_export]
 macro_rules! warning {
     ($message:expr) => {
-        use owo_colors::OwoColorize;
         println!(
             "{} {}",
             "[  ]".yellow().bold(),
@@ -9,7 +8,6 @@ macro_rules! warning {
         );
     };
     ($message:expr, $($arg:expr),*) => {
-        use owo_colors::OwoColorize;
         println!(
             "{} {}",
             "[  ]".yellow().bold(),
@@ -20,7 +18,6 @@ macro_rules! warning {
 #[macro_export]
 macro_rules! error {
     ($message:expr) => {
-        use owo_colors::OwoColorize;
         eprintln!(
             "{} {}",
             "[  ]".red().bold(),
@@ -28,7 +25,6 @@ macro_rules! error {
         );
     };
     ($message:expr, $($arg:expr),*) => {
-        use owo_colors::OwoColorize;
         eprintln!(
             "{} {}",
             "[  ]".red().bold(),
@@ -39,7 +35,6 @@ macro_rules! error {
 #[macro_export]
 macro_rules! success {
     ($message:expr) => {
-        use owo_colors::OwoColorize;
         println!(
             "{} {}",
             "[  ]".green().bold(),
@@ -47,7 +42,6 @@ macro_rules! success {
         );
     };
     ($message:expr, $($arg:expr),*) => {
-        use owo_colors::OwoColorize;
         println!(
             "{} {}",
             "[  ]".green().bold(),
@@ -84,4 +78,3 @@ macro_rules! cmd {
         }
     }};
 }
-
